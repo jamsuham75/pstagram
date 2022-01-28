@@ -30,3 +30,12 @@ class PhotoDeleteView(DeleteView):
     model = Photo
     success_url = '/'
     template_name = 'photo/delete.html'
+
+def page_not_found(request, exception):
+    """
+    404 Page not found
+    :param request:
+    :param exception:
+    :return:
+    """
+    return render(request, 'photo/404.html', {})
